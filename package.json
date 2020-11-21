@@ -3,6 +3,7 @@
   "displayName": "quick-open-selected",
   "description": "Runs Quick Open with selected text",
   "version": "0.0.1",
+  "repository": "https://github.com/rulyaryu/quick-open-by-selection.git",
   "engines": {
     "vscode": "^1.51.0"
   },

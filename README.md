@@ -1,65 +1,41 @@
-# gotofilebyselection README
+# quick-open-by-selection README
 
-This is the README for your extension "gotofilebyselection". After writing up a brief description, we recommend including the following sections.
-
+Quick Open By Selection
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+Select some text that describe some path to some point in a project
 
-For example if there is an image subfolder under your extension project workspace:
+and press keybinding ctrl+shift+n (or on mac cmd+shift+n) and it will open Quick Open menu 
 
-\!\[feature X\]\(images/feature-x.png\)
+with search results for selected text
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
 
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+![quick-open-selection](/images/quick-open-selection.png)
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+settings for keybindings (default): 
 
-For example:
+      {
+        "command": "quick-open-selected.openFile",
+        "title": "Open Selected",
+        "key": "ctrl+shift+n",
+        "mac": "cmd+shift+n",
+        "when": "editorHasSelection"
+      },
+      {
+        "command": "workbench.action.quickOpen",
+        "key": "ctrl+shift+n",
+        "when": "!editorHasSelection"
+      }
 
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+First Release
 
-### 1.0.0
+### 0.1.0
 
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+Initial release
 
 -----------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
